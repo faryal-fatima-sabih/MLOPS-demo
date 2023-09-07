@@ -1,0 +1,22 @@
+name: Bulb Simulation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  simulate_bulb:
+    runs-on: windows-latest  # Use windows-latest for a Windows environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8  # Specify your desired Python version
+
+      - name: Run Bulb Simulation
+        run: python simulate_bulb.py  # Replace with the actual name of your Python script
