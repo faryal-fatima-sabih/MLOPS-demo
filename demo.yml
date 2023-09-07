@@ -1,0 +1,17 @@
+name: Demo Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Hello GitHub Actions
+        run: echo "Hello, GitHub Actions! I am Faryal Fatima Sabih entering into the world of MLOps"
